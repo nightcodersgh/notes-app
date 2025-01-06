@@ -1,9 +1,6 @@
-{ -- state - notes
-
 - search
 - tags
 - note list - note card
-  }
 
 # models
 
