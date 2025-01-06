@@ -99,14 +99,7 @@ function App() {
 					}}
 				>
 					{getNotes.map((note) => (
-						<Note
-							key={note.title}
-							title={note.title}
-							content={note.content}
-							date={note.date}
-							completed={note.completed}
-							tag={note.tag}
-						/>
+						<Note key={note.title} note={note} />
 					))}
 				</div>
 			</div>

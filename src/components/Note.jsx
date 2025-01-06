@@ -1,16 +1,22 @@
-const Note = ({ title, date, content, completed, tag }) => {
+import PropTypes from "prop-types";
+
+const Note = ({ note }) => {
 	return (
 		<div className="card">
 			<div className="card-body">
-				<h5 className="card-title">{title}</h5>
-				<p className="card-text">{content}</p>
-				<p className="card-text">{completed ? "Completed" : "Pending"}</p>
-				<span className="badge" style={{ backgroundColor: tag.color }}>
-					{tag.name}
+				<h5 className="card-title">{note.title}</h5>
+				<p className="card-text">{note.content}</p>
+				<p className="card-text">{note.completed ? "Completed" : "Pending"}</p>
+				<span className="badge" style={{ backgroundColor: note.tag.color }}>
+					{note.tag.name}
 				</span>
 			</div>
 		</div>
 	);
+};
+
+Note.propTypes = {
+	note: PropTypes.object.isRequired,
 };
 
 export default Note;
